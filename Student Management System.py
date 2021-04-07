@@ -38,15 +38,14 @@ class Student:
         self.address = address
 
 
-nameLabel = tk.Label(root, text="Enter your name", width=40, anchor='w',
-                     font=("Sylfaen", 12), fg="#000000").grid(row=1, column=0, padx=(10, 0),
-                                                              pady=(30, 0))
-collegeLabel = tk.Label(root, text="Enter your college", width=40, anchor='w',
-                        font=("Sylfaen", 12), fg="#000000").grid(row=2, column=0, padx=(10, 0))
-phoneLabel = tk.Label(root, text="Enter your phone number", width=40, anchor='w',
-                      font=("Sylfaen", 12), fg="#000000").grid(row=3, column=0, padx=(10, 0))
-addressLabel = tk.Label(root, text="Enter your address", width=40, anchor='w',
-                        font=("Sylfaen", 12), fg="#000000").grid(row=4, column=0, padx=(10, 0))
+nameLabel = tk.Label(root, text="Enter your name", width=40, anchor='w', font=(
+    "Sylfaen", 12), fg="#000000").grid(row=1, column=0, padx=(10, 0), pady=(30, 0))
+collegeLabel = tk.Label(root, text="Enter your college", width=40, anchor='w', font=(
+    "Sylfaen", 12), fg="#000000").grid(row=2, column=0, padx=(10, 0))
+phoneLabel = tk.Label(root, text="Enter your phone number", width=40, anchor='w', font=(
+    "Sylfaen", 12), fg="#000000").grid(row=3, column=0, padx=(10, 0))
+addressLabel = tk.Label(root, text="Enter your address", width=40, anchor='w', font=(
+    "Sylfaen", 12), fg="#000000").grid(row=4, column=0, padx=(10, 0))
 
 nameEntry = tk.Entry(root, width=30)
 collegeEntry = tk.Entry(root, width=30)
@@ -61,7 +60,6 @@ addressEntry.grid(row=4, column=1, padx=(0, 10), pady=20)
 
 def takeNameInput():
     global nameEntry, collegeEntry, phoneEntry, addressEntry
-    # global username, collegeName, phone, address
     global list
     global TABLE_NAME, STUDENT_NAME, STUDENT_COLLEGE, STUDENT_ADDRESS, STUDENT_PHONE
     username = nameEntry.get()
@@ -113,12 +111,6 @@ def destroyRootWindow():
     tree.pack()
     secondWindow.mainloop()
 
-
-# def printDetails():
-#     for singleItem in list:
-#         print("Student name is: %s\nCollege name is: %s\nPhone number is: %d\nAddress is: %s" %
-#               (singleItem.studentName, singleItem.collegeName, singleItem.phoneNumber, singleItem.address))
-#         print("****************************************")
 
 button = tk.Button(root, text="Take input", fg="#000000",
                    command=lambda: takeNameInput())
